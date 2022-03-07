@@ -10,6 +10,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 
@@ -161,7 +162,7 @@ endif
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-" nmap <silent> <C-w> <Plug>(coc-range-select)
+nmap <silent> <Space>w <Plug>(coc-range-select)
 " xmap <silent> <C-w> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
@@ -225,5 +226,5 @@ nnoremap <C-Left> :tabp <CR>
 " Split Actions
 nnoremap <Space>j <C-W><C-J>
 nnoremap <Space>k <C-W><C-K>
-nnoremap <space>l <C-W><C-L>
+nnoremap <Space>l <C-W><C-L>
 nnoremap <Space>h <C-W><C-H>

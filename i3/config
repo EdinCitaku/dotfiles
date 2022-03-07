@@ -50,8 +50,17 @@ bindsym $mod+z exec --no-startup-id morc_menu
 #exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pa-applet
+#exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
+
+set $audioUp XF86AudioRaiseVolume
+set $audioDown XF86AudioLowerVolume
+set $audioMute XF86AudioMute
+
+bindsym $audioUp exec "/usr/bin/pulseaudio-ctl up"
+bindsym $audioDown exec "/usr/bin/pulseaudio-ctl down"
+bindsym $audioMute exec "/usr/bin/pulseaudio-ctl mute"
+
 
 ################################################################################################
 
@@ -280,7 +289,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 #exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
