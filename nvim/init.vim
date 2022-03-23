@@ -11,12 +11,30 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdcommenter'
+
+Plug 'sainnhe/everforest'
+
 call plug#end()
 
 
 " Color Scheme
 syntax enable
-colorscheme monokai
+" Important!!
+if has('termguicolors')
+  set termguicolors
+endif
+" For dark version.
+" set background=dark
+" For light version.
+set background=light
+" Set contrast.
+" This configuration option should be placed before `colorscheme everforest`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'soft'
+" For better performance
+let g:everforest_better_performance = 1
+colorscheme everforest
+
 
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
