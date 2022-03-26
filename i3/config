@@ -10,7 +10,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border pixel 3
 default_floating_border normal
 
 # Hide borders
@@ -38,8 +38,8 @@ bindsym $mod+r exec kitty ranger
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
-
+#bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+space exec rofi -show run -font "System San Francisco Display 18"
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
@@ -132,7 +132,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
@@ -335,8 +335,12 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command i3status
-	position top
+  font pango:Inconsolata 12
+  status_command /usr/bin/bumblebee-status -m git cpu \
+		memory battery date time\
+		-p time.format="%H:%M" date.format="%a, %b %d %Y"\
+    -t gruvbox-powerline
+  position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
