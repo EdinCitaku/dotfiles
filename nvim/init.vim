@@ -30,7 +30,7 @@ set background=dark
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_background = 'soft'
+let g:everforest_background = 'hard'
 " For better performance
 let g:everforest_better_performance = 1
 colorscheme everforest
@@ -191,7 +191,7 @@ nnoremap <C-i> :Format <CR>
 nnoremap <C-i> gg=G <CR>
 
 " Save and Close
-nnoremap <C-q> :x <CR>
+nnoremap <C-q> :q! <CR>
 " Save
 nnoremap <C-s> :w! <CR>
 
@@ -230,6 +230,10 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" NerdCommenter
+let g:NERDCommentEmptyLines = 1
+
+noremap <space>/ :call nerdcommenter#Comment(0,"toggle")<cr>
 
 " NERDTREE
 
