@@ -188,12 +188,12 @@ command! -nargs=0 Format :call CocActionAsync('format')
 
 " Format current buffer 
 nnoremap <C-i> :Format <CR>
-nnoremap <C-i> gg=G <CR>
 
 " Save and Close
-nnoremap <C-q> :q! <CR>
+nnoremap <space>q :q! <CR>
 " Save
 nnoremap <C-s> :w! <CR>
+nnoremap <space>x :x! <CR>
 
 " Search in all files
 nnoremap <C-f> :Ag <CR>

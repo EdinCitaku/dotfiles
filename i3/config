@@ -336,7 +336,7 @@ set_from_resource $term_color15    color15
 bar {
 	i3bar_command i3bar
   font pango:Inconsolata 12
-  status_command /usr/bin/bumblebee-status -m git playerctl \
+  status_command /usr/bin/bumblebee-status -m git title\
 		battery date time\
 		-p time.format="%H:%M" date.format="%a, %b %d %Y"\
     -t gruvbox-powerline
