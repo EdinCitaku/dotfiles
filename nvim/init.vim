@@ -1,6 +1,5 @@
 call plug#begin()
 
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'preservim/nerdtree'
@@ -192,14 +191,14 @@ nnoremap <C-i> :Format <CR>
 " Save and Close
 nnoremap <space>q :q! <CR>
 " Save
-nnoremap <C-s> :w! <CR>
+nnoremap <space>s :w! <CR>
 nnoremap <space>x :x! <CR>
 
 " Search in all files
-nnoremap <C-f> :Ag <CR>
+nnoremap <space>f :Ag <CR>
 
 " Search for filename
-nnoremap <C-space> :Files <CR>
+nnoremap <space><space> :Files <CR>
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -222,7 +221,7 @@ nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>i  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
