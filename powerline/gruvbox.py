@@ -47,7 +47,7 @@ faded_orange = 130
 white = 231
 light_green = 2
 darkish_green = 65
-
+brown = 94
 class Color(DefaultColor):
     USERNAME_ROOT_BG = light2
     USERNAME_BG = darkish_green
@@ -70,9 +70,9 @@ class Color(DefaultColor):
     SSH_BG = faded_purple
     SSH_FG = light0
 
-    REPO_CLEAN_BG = 22
-    REPO_CLEAN_FG = dark1
-    REPO_DIRTY_BG = 94
+    REPO_CLEAN_BG = brown
+    REPO_CLEAN_FG = light0
+    REPO_DIRTY_BG = brown
     REPO_DIRTY_FG = light0
 
     JOBS_FG = neutral_aqua
