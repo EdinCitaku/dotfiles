@@ -249,3 +249,5 @@ nnoremap <Space>j <C-W><C-J>
 nnoremap <Space>k <C-W><C-K>
 nnoremap <Space>l <C-W><C-L>
 nnoremap <Space>h <C-W><C-H>
+nnoremap <silent>tl :tabn <CR>
+nnoremap <silent>th :tabp <CR>
