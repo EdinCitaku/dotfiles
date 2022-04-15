@@ -160,10 +160,10 @@ bindsym $mod+Ctrl+h workspace prev
 set $ws1 1:vim  
 set $ws2 2:terminals 
 set $ws3 3:browser  
-set $ws4 4:misc 
+set $ws4 4:notes 
 set $ws5 5:music 
 set $ws6 6:chat 
-set $ws7 7:notes 
+set $ws7 7:misc   
 set $ws8 8
 
 # switch to workspace
@@ -301,7 +301,7 @@ bar {
   font pango:Jetbrains Mono 13
   status_command /usr/bin/bumblebee-status -m title\
 		battery date time\
-		-p time.format="%H:%M" date.format="%a, %b %d %Y"\
+		-p time.format="%H:%M" date.format="%a, %b %d %Y" \
     -t gruvbox-powerline
   position top
 
