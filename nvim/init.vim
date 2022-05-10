@@ -179,7 +179,7 @@ endif
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <Space>w <Plug>(coc-range-select)
+nmap <silent> <C-w> <Plug>(coc-range-select)
 " xmap <silent> <C-w> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
