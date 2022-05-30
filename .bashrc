@@ -163,12 +163,13 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 		PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-echo "Cargo Boat Passing through Waves, print by Hokusai, c. 1805"
-echo ""
-export KITTY_WALLPAPER_DIR=~/git/dotfiles/wallpaper/kitty
-icat $KITTY_WALLPAPER_DIR/test.jpg
-echo ""
+#echo "Cargo Boat Passing through Waves, print by Hokusai, c. 1805"
+#echo ""
+#export KITTY_WALLPAPER_DIR=~/git/dotfiles/wallpaper/kitty
+#icat $KITTY_WALLPAPER_DIR/test.jpg
+#echo ""
 
+terminalmuseum --print_title --command "kitty +kitten icat"
 
 # Cardano
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
